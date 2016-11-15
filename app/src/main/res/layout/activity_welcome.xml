@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/welcome"
+    tools:context="com.example.kelly.myapplication.WelcomeActivity"
+    android:weightSum="1">
+
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:text="WangKaiLi"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="70dp"
+        android:textColor="#930093"
+        android:textSize="30sp"
+
+        android:width="190px"
+        android:layout_marginTop="150dp" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="3035348114"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="70dp"
+        android:textColor="#930093"
+        android:textSize="28sp"
+
+        android:width="190px"
+        android:layout_marginTop="200dp" />
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="startGame"
+        android:onClick="startGame"
+        android:id="@+id/button"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="280dp"/>
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/board_bg"
+  android:clipChildren="false">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="25dp"
+      android:gravity="center"
+      android:id="@+id/control_btn">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:text="new game"
+        android:id="@+id/reset_button"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="retract"
+        android:id="@+id/recall_button"/>
+  </LinearLayout>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="60dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:id="@+id/game_board"
+                android:clipChildren="false"
+                android:gravity="center"
+                android:layout_below="@+id/control_btn"
+                tools:context=".GameActivity">
+    <include layout="@layout/board_row" />
+    <include layout="@layout/board_row" />
+    <include layout="@layout/board_row" />
+    <include layout="@layout/board_row" />
+    <include layout="@layout/board_row" />
+    <include layout="@layout/board_row" />
+  </LinearLayout>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="60dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:clipChildren="false"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_below="@+id/control_btn"
+                android:id="@+id/game_board_front"
+                tools:context=".GameActivity">
+    <include layout="@layout/front_board_row" />
+    <include layout="@layout/front_board_row" />
+    <include layout="@layout/front_board_row" />
+    <include layout="@layout/front_board_row" />
+    <include layout="@layout/front_board_row" />
+    <include layout="@layout/front_board_row" />
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/game_board_front"
+      android:id="@+id/result_indicator"
+      android:paddingLeft="@dimen/activity_horizontal_margin"
+      android:paddingRight="@dimen/activity_horizontal_margin"
+      android:paddingTop="@dimen/activity_vertical_margin"
+      android:paddingBottom="@dimen/activity_vertical_margin"
+      android:layout_alignParentLeft="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/win_text_view"
+        android:paddingRight="5dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Win:"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/win_image_view"
+        android:src="@drawable/red"
+        android:visibility="invisible"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Turn"
+
+        android:id ="@+id/turnTextView"
+        android:visibility="invisible"
+
+
+        android:layout_marginRight="8dp" />
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/turn_view"
+        android:visibility="invisible"
+        android:layout_marginRight="0dp" />
+  </LinearLayout>
+</RelativeLayout>
+
